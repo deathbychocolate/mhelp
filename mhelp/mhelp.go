@@ -119,6 +119,9 @@ func main() {
 			string(colourDefault)+"(default: "+v.value+")"+string(colourReset)+"\n",
 		)
 	}
+	output += "\nExample(s):\n" +
+		"  make\n" +
+		"  make help\n"
 
 	fmt.Println(output)
 }
