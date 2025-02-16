@@ -1,5 +1,5 @@
 # mhelp
-A simple CLI tool written in Go. It prints a help doc of your Makefile to your terminal.
+A CLI tool written in Go that prints a help doc of your Makefile.
 
 Inspired from the [article](https://medium.com/@vildmedpap/make-your-makefile-user-friendly-create-a-custom-make-help-target-88c9ef130879) by *Sebastian Steenssøe*.
 
