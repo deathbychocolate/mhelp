@@ -17,16 +17,16 @@ clean:  ## Cleans the builds folder using 'rm'.
 
 .PHONY: build_windows
 build_windows:  ## Builds the project for windows platforms using 'go build'.
-	@GOOS=windows GOARCH=amd64 go build -o ./builds/help_windows_amd64 ./mhelp/mhelp.go
+	@GOOS=windows GOARCH=amd64 go build -o ./builds/mhelp_windows_amd64 ./mhelp/mhelp.go
 
 .PHONY: build_darwin
 build_darwin:  ## Builds the project for darwin platforms using 'go build'.
-	@GOOS=darwin  GOARCH=arm64 go build -o ./builds/help_darwin_arm64  ./mhelp/mhelp.go
+	@GOOS=darwin  GOARCH=arm64 go build -o ./builds/mhelp_darwin_arm64  ./mhelp/mhelp.go
 
 .PHONY: build_linux
 build_linux:  ## Builds the project for linux platforms using 'go build'.
-	@GOOS=linux   GOARCH=amd64 go build -o ./builds/help_linux_amd64   ./mhelp/mhelp.go
+	@GOOS=linux   GOARCH=amd64 go build -o ./builds/mhelp_linux_amd64   ./mhelp/mhelp.go
 
 .PHONY: help
 help:  ## Show help and exit.
-	@./builds/help_darwin_arm64 -filepath $(MAKEFILE_LIST)
+	@./builds/mhelp_darwin_arm64 -filepath $(MAKEFILE_LIST)
