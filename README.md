@@ -5,9 +5,9 @@ Inspired from the [article](https://medium.com/@vildmedpap/make-your-makefile-us
 
 # How
 ### How do I use it?
-The usage is the almost identical to the bash script from the article:
+The usage is almost identical to the bash script from the article:
 1) Download binaries from this repo (or build them yourself).
-2) Create a `scripts` folder at the root of your repo and place the downloaded.
+2) Create a `scripts` folder at the root of your repo and place the downloaded binaries there.
 3) Lastly, assuming your Makefile is found at your repo's root, add this to your Makefile:
 ```Makefile
 .DEFAULT_GOAL := help
@@ -28,7 +28,7 @@ Usage of ./scripts/help_darwin_arm64:
 ### How does it work?
 The tool captures and processes any line that contains a comment denoted by the `##` sequence and organizing them into the sections `Target(s)` and `Variable(s)`.
 
-Comments denoted by `#` will be ignored. Comments denoted denoted by `##` but not placed on the same line as a variable or target will also be ignored. Any line that contains more than 2 `#` in a row will treat anything past the 2nd as documentation.
+Comments denoted by `#` will be ignored. Comments denoted by `##` but not placed on the same line as a variable or target will also be ignored. Any line that contains more than 2 `#` in a row  will have anything past the second `#` treated as documentation.
 
 For example, these are the outputs you can expect for the given Makefiles:
 
@@ -79,7 +79,7 @@ build-image:  ## Build image
 run-image:  ## Run image
     @docker run --name ${CONTAINER_NAME} -p ${PORT}:5000 ${IMAGE_NAME}:latest
 ```
-[![](docs/images/test_makefile1.png)](docs/images/test_makefile2.png)
+[![](docs/images/test_makefile2.png)](docs/images/test_makefile2.png)
 
 And if for whatever reason you decide to use Makefiles that are `50.000 lines` long, the tool can process that too in under `1 second`.
 
