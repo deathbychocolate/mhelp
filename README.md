@@ -30,7 +30,7 @@ The tool captures and processes any line that contains a comment denoted by the 
 
 Comments denoted by `#` will be ignored. Comments denoted denoted by `##` but not placed on the same line as a variable or target will also be ignored. Any line that contains more than 2 `#` in a row will treat anything past the 2nd as documentation.
 
-For example, these are the outputs you can expect forr the given Makefiles:
+For example, these are the outputs you can expect for the given Makefiles:
 
 #### Example Makefile 1:
 ```Makefile
