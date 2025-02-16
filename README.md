@@ -6,7 +6,7 @@ Inspired from the [article](https://medium.com/@vildmedpap/make-your-makefile-us
 # How
 ### How do I use it?
 The usage is almost identical to the bash script from the article:
-1) Download binaries from this repo (or build them yourself).
+1) Download the release binaries from this repo (or build them yourself).
 2) Create a `scripts` folder at the root of your repo and place the downloaded binaries there.
 3) Lastly, assuming your Makefile is found at your repo's root, add this to your Makefile:
 ```Makefile
